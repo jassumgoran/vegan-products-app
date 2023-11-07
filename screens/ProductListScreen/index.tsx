@@ -1,35 +1,33 @@
 import React from "react";
-import { View, TouchableOpacity, Text } from "react-native";
+import { ActivityIndicator } from "react-native";
 import Screen from "../Screen";
 import { RootStackParamList } from "../../types";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import useProductsHook from "../../hooks/useProductsHook";
+import ProductList from "../../components/ProductList";
+import { Product } from "../../types";
 
 type Props = NativeStackScreenProps<RootStackParamList, "ProductList">;
 
 const ProductListScreen: React.FC<Props> = ({ navigation }) => {
   const { loading, products } = useProductsHook();
 
+  const handleProductClick = (product: Product) => {
+    navigation.navigate("ProductDetails", {
+      product,
+    });
+  };
+
   return (
     <Screen>
       <>
-        <Text>Products List Screen</Text>
         {loading ? (
-          <Text>{loading}</Text>
+          <ActivityIndicator size="large" />
         ) : (
-          products?.map((product) => {
-            return (
-              <TouchableOpacity
-                onPress={() => {
-                  navigation.navigate("ProductDetails", {
-                    product,
-                  });
-                }}
-              >
-                <View style={{ padding: 5 }}>{product.name}</View>
-              </TouchableOpacity>
-            );
-          })
+          <ProductList
+            products={products}
+            onProductClick={handleProductClick}
+          />
         )}
       </>
     </Screen>
