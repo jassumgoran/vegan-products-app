@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductDetailsScreen from "./screens/ProductDetailsScreen";
 import { RootStackParamList } from "./types";
+import "./api";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
