@@ -1,3 +1,7 @@
+/**
+ * Responsible for retrieving the products from the Mock API and handling the empty state and pagination
+ */
+
 import { useEffect, useState } from "react";
 import ApiClient from "../api/client";
 import { PaginationOptionsType, Product } from "../types";

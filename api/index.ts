@@ -1,8 +1,10 @@
+/**
+ * Mock API Server that handles 2 GET product routes
+ */
+
 import { createServer } from "miragejs";
 import getProducts from "./handlers/getProducts";
 import getProduct from "./handlers/getProduct";
-
-export const DEFAULT_PAGE_SIZE = 10;
 
 declare global {
   interface Window {

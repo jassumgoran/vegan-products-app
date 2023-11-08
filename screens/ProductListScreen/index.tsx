@@ -1,3 +1,8 @@
+/**
+ * Screen for displaying a list of products.
+ * @todo Replace hardcoded strings with localized strings for internationalization.
+ */
+
 import React, { useState } from "react";
 import { ActivityIndicator, View, TextInput } from "react-native";
 import Screen from "../Screen";

@@ -1,3 +1,10 @@
+/**
+ * Mock handler for retrieving a single product.
+ *
+ * @param {number} id - The unique identifier of the product.
+ * @returns {Product} - A single product.
+ */
+
 import { Response } from "miragejs";
 import products from "../../data/products.json";
 

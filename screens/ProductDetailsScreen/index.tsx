@@ -1,3 +1,8 @@
+/**
+ * Screen for displaying selected product details.
+ * @todo Replace hardcoded strings with localized strings for internationalization.
+ */
+
 import { NativeStackScreenProps } from "@react-navigation/native-stack";
 import React from "react";
 import { View, Text, ScrollView } from "react-native";

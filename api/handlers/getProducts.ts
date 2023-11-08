@@ -1,3 +1,12 @@
+/**
+ * Mock handler for retrieving a paginated list of products.
+ *
+ * @param {Object} queryParams - Optional query parameters.
+ * @param {number} [queryParams.page=1] - Optional page number for pagination. Default is 1.
+ * @param {string} [queryParams.search] - Optional search query to filter products.
+ * @returns {Product[]} - An array of products.
+ */
+
 import { Response } from "miragejs";
 import { DEFAULT_PAGE_SIZE } from "../../constants";
 import {
