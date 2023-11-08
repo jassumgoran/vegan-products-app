@@ -5,8 +5,8 @@ This is a basic app that displays a list of vegan products.
 ## Running the example
 
 cd ProductsApp
-npm install
-npm start
+1. npm install
+2. npm start
 
 ## Future Improvements
 
