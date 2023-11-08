@@ -3,175 +3,150 @@
     "id": 1,
     "name": "Organic Apple",
     "description": "Fresh and crisp organic apple.",
-    "category": "Fruit",
     "price": 2.99
   },
   {
     "id": 3,
     "name": "Organic Spinach",
     "description": "Tender and nutritious organic spinach leaves.",
-    "category": "Vegetable",
     "price": 3.49
   },
   {
     "id": 5,
     "name": "Pasta (1 lb)",
     "description": "High-quality pasta for your favorite recipes.",
-    "category": "Pasta",
     "price": 2.49
   },
   {
     "id": 6,
     "name": "Blueberries",
     "description": "Sweet and juicy blueberries, perfect for snacking.",
-    "category": "Fruit",
     "price": 4.99
   },
   {
     "id": 8,
     "name": "Artisan Bread",
     "description": "Handcrafted artisan bread, baked daily.",
-    "category": "Bread",
     "price": 3.99
   },
   {
     "id": 11,
     "name": "Organic Quinoa (1 lb)",
     "description": "Nutrient-rich organic quinoa for your meals.",
-    "category": "Grains",
     "price": 5.29
   },
   {
     "id": 13,
     "name": "Chocolate Chip Cookies",
     "description": "Homemade-style chocolate chip cookies.",
-    "category": "Snacks",
     "price": 3.49
   },
   {
     "id": 14,
     "name": "Organic Avocado",
     "description": "Creamy and nutritious organic avocado.",
-    "category": "Vegetable",
     "price": 1.79
   },
   {
     "id": 18,
     "name": "Organic Tomato Sauce (24 oz)",
     "description": "Rich and savory organic tomato sauce for pasta.",
-    "category": "Sauces",
     "price": 4.49
   },
   {
     "id": 21,
     "name": "Almond Milk (32 oz)",
     "description": "Dairy-free almond milk for all your plant-based needs.",
-    "category": "Beverage",
     "price": 2.99
   },
   {
     "id": 22,
     "name": "Organic Green Tea (20 bags)",
     "description": "Refreshing organic green tea bags for a soothing beverage.",
-    "category": "Beverage",
     "price": 3.99
   },
   {
     "id": 23,
     "name": "Freshly Squeezed Orange Juice (16 oz)",
     "description": "Pure and fresh orange juice for a morning boost.",
-    "category": "Beverage",
     "price": 3.79
   },
   {
     "id": 24,
     "name": "Coconut Water (500 ml)",
     "description": "Natural coconut water for hydration and refreshment.",
-    "category": "Beverage",
     "price": 2.49
   },
   {
     "id": 25,
     "name": "Organic Earl Grey Tea (25 bags)",
     "description": "Classic organic Earl Grey tea bags for tea enthusiasts.",
-    "category": "Beverage",
     "price": 4.49
   },
   {
     "id": 26,
     "name": "Vegan Burger Patties (4-pack)",
     "description": "Delicious vegan burger patties for your next BBQ.",
-    "category": "Vegan",
     "price": 6.99
   },
   {
     "id": 27,
     "name": "Organic Kale",
     "description": "Fresh and nutrient-packed organic kale leaves.",
-    "category": "Vegetable",
     "price": 3.99
   },
   {
     "id": 28,
     "name": "Vegan Cheese (8 oz)",
     "description": "Dairy-free vegan cheese for your favorite dishes.",
-    "category": "Vegan",
     "price": 5.49
   },
   {
     "id": 29,
     "name": "Vegan Ice Cream (Pint)",
     "description": "Indulgent vegan ice cream in a variety of flavors.",
-    "category": "Vegan",
     "price": 4.99
   },
   {
     "id": 30,
     "name": "Quinoa Salad Mix",
     "description": "Convenient quinoa salad mix for a quick and healthy meal.",
-    "category": "Salads",
     "price": 4.29
   },
   {
     "id": 31,
     "name": "Vegan Protein Shake (16 oz)",
     "description": "Plant-based protein shake for post-workout recovery.",
-    "category": "Vegan",
     "price": 3.99
   },
   {
     "id": 32,
     "name": "Organic Hummus (8 oz)",
     "description": "Smooth and creamy organic hummus for dipping.",
-    "category": "Dips",
     "price": 2.79
   },
   {
     "id": 33,
     "name": "Vegan Pizza (Frozen)",
     "description": "Delicious frozen vegan pizza with a variety of toppings.",
-    "category": "Vegan",
     "price": 7.49
   },
   {
     "id": 34,
     "name": "Sparkling Mineral Water (500 ml)",
     "description": "Refreshing sparkling mineral water for a fizzy treat.",
-    "category": "Beverage",
     "price": 1.99
   },
   {
     "id": 35,
     "name": "Vegan Chocolate Bars (Pack of 3)",
     "description": "Indulgent vegan chocolate bars in a convenient pack.",
-    "category": "Vegan",
     "price": 5.99
   },
   {
     "id": 36,
     "name": "Organic Almonds (8 oz)",
     "description": "Nutrient-packed organic almonds for snacking or baking.",
-    "category": "Nuts",
     "price": 4.29
   }
 ]
