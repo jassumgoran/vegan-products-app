@@ -7,26 +7,27 @@ import {
   HEADER_X_PER_PAGE,
 } from "../";
 import products from "../../data/products.json";
+import { Product } from "../../types";
+
+const search = (products: Product[], query: string) => {
+  return products.filter((product) =>
+    product.name.toLowerCase().includes(query)
+  );
+};
 
 const handler = (_schema: any, request: any) => {
   let limit = Number(request.queryParams?.limit || DEFAULT_PAGE_SIZE);
   let page = Number(request.queryParams?.page) || 1;
   let offset = (page - 1) * limit;
-  let search = request.queryParams?.search?.toLowerCase();
+  let query = request.queryParams?.search?.toLowerCase();
 
-  let allProducts = [...products];
+  let productsResult = query ? search([...products], query) : [...products];
 
-  if (search) {
-    allProducts = allProducts.filter((product) =>
-      product.name.toLowerCase().includes(search)
-    );
-  }
-
-  const total = allProducts.length;
+  const total = productsResult.length;
 
   let totalPages = Math.ceil(total / limit);
 
-  const paginatedItems = allProducts.slice(offset, offset + limit);
+  const paginatedItems = productsResult.slice(offset, offset + limit);
 
   const headers = {
     [HEADER_PAGE]: page.toString(),
