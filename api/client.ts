@@ -1,5 +1,9 @@
 import axios, { AxiosInstance, AxiosRequestHeaders } from "axios";
-import { HEADER_PAGE, HEADER_TOTAL_COUNT, HEADER_TOTAL_PAGES } from ".";
+import {
+  HEADER_PAGE,
+  HEADER_TOTAL_COUNT,
+  HEADER_TOTAL_PAGES,
+} from "../constants/headers";
 import { PaginationOptionsType } from "../types";
 
 export const baseURL = process.env.EXPO_PUBLIC_API_URL || "/api/v1";

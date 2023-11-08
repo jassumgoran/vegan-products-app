@@ -16,7 +16,6 @@ export default StyleSheet.create({
   },
   pageLabel: {
     marginHorizontal: 10,
-    whiteSpace: "nowrap",
     flex: 1,
     textAlign: "center",
     color: "black",

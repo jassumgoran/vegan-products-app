@@ -1,11 +1,11 @@
 import { Response } from "miragejs";
+import { DEFAULT_PAGE_SIZE } from "../../constants";
 import {
-  DEFAULT_PAGE_SIZE,
   HEADER_PAGE,
   HEADER_TOTAL_COUNT,
   HEADER_TOTAL_PAGES,
   HEADER_X_PER_PAGE,
-} from "../";
+} from "../../constants/headers";
 import products from "../../data/products.json";
 import { Product } from "../../types";
 
