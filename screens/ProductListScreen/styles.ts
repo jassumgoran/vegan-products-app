@@ -20,4 +20,7 @@ export default StyleSheet.create({
     borderRadius: 10,
     backgroundColor: "white",
   },
+  loadingIndicator: {
+    flex: 1,
+  },
 });

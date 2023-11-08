@@ -9,6 +9,7 @@ import { Product } from "../../types";
 import styles from "./styles";
 import Pagination from "../../components/Pagination";
 import EmptyState from "../../components/EmptyState";
+import colors from "../../constants/colors";
 
 type Props = NativeStackScreenProps<RootStackParamList, "ProductList">;
 
@@ -26,19 +27,23 @@ const ProductListScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <Screen>
       <>
+        <View style={styles.topbar}>
+          <TextInput
+            style={styles.searchInput}
+            placeholder="Search for products"
+            clearButtonMode="always"
+            value={search}
+            onChangeText={setSearch}
+          />
+        </View>
         {loading ? (
-          <ActivityIndicator size="large" />
+          <ActivityIndicator
+            size="large"
+            color={colors.primary}
+            style={styles.loadingIndicator}
+          />
         ) : (
           <>
-            <View style={styles.topbar}>
-              <TextInput
-                style={styles.searchInput}
-                placeholder="Search for products"
-                clearButtonMode="always"
-                value={search}
-                onChangeText={setSearch}
-              />
-            </View>
             <View style={styles.content}>
               {showEmptyState ? (
                 <EmptyState

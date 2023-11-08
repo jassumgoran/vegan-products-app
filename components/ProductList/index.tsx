@@ -1,9 +1,10 @@
 import React from "react";
 import { FlatList, Pressable, View } from "react-native";
-import ProductListItem from "../ProductListItem";
+import ProductListItem from "../ListItem";
 import { Product } from "../../types";
 import styles from "./styles";
 import colors from "../../constants/colors";
+import { formatCurrency } from "../../utils";
 
 type ProductListProps = {
   products: Product[] | null | undefined;
@@ -23,7 +24,13 @@ const ProductList: React.FC<ProductListProps> = ({
         },
       ]}
     >
-      <ProductListItem product={product} />
+      <ProductListItem
+        item={{
+          title: product.name,
+          description: product.description,
+          value: formatCurrency(product.price),
+        }}
+      />
     </Pressable>
   );
 

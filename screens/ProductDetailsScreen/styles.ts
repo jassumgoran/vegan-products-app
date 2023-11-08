@@ -3,8 +3,12 @@ import colors from "../../constants/colors";
 import dimensions from "../../constants/dimensions";
 
 export default StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+  },
   labelContainer: {
-    flexDirection: "row",
+    flexDirection: "column",
     alignItems: "center",
   },
   name: {
@@ -20,6 +24,7 @@ export default StyleSheet.create({
   text: {
     fontSize: dimensions.text.medium,
     color: colors.text.primary,
+    paddingHorizontal: 20,
     marginBottom: 10,
   },
   price: {

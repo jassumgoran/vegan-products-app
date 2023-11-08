@@ -21,3 +21,9 @@ export type Pagination = {
   currentPage: number;
   totalPages: number;
 };
+
+export type ListItem = {
+  title: string;
+  description: string;
+  value: string;
+};

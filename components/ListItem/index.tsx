@@ -1,24 +1,24 @@
 import React from "react";
 import { View, Text } from "react-native";
-import { Product } from "../../types";
+import { ListItem } from "../../types";
 import styles from "./styles";
 
 type ProductListItemProps = {
-  product: Product;
+  item: ListItem;
 };
 
-const ProductListItem: React.FC<ProductListItemProps> = ({ product }) => {
+const ProductListItem: React.FC<ProductListItemProps> = ({ item }) => {
   return (
     <View style={styles.container}>
       <View style={styles.labels}>
         <Text style={styles.name} numberOfLines={1}>
-          {product.name}
+          {item.title}
         </Text>
         <Text style={styles.description} numberOfLines={1}>
-          {product.description}
+          {item.description}
         </Text>
       </View>
-      <Text style={styles.price}>{`$${product.price}`}</Text>
+      <Text style={styles.price}>{`${item.value}`}</Text>
     </View>
   );
 };
