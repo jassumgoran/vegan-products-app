@@ -1,4 +1,6 @@
 import axios, { AxiosInstance, AxiosRequestHeaders } from "axios";
+import { HEADER_PAGE, HEADER_TOTAL_COUNT, HEADER_TOTAL_PAGES } from ".";
+import { PaginationOptionsType } from "../types";
 
 export const baseURL = process.env.EXPO_PUBLIC_API_URL || "/api/v1";
 
@@ -25,6 +27,23 @@ class ApiClient {
     });
 
     return data;
+  }
+
+  public async getPaged<T>(
+    path: string,
+    _headers?: AxiosRequestHeaders
+  ): Promise<[T, PaginationOptionsType]> {
+    const { data, headers } = await this.api.get(path, {
+      headers: _headers,
+    });
+
+    const paginationOptions = {
+      totalCount: Number(headers[HEADER_TOTAL_COUNT]),
+      totalPages: Number(headers[HEADER_TOTAL_PAGES]),
+      currentPage: Number(headers[HEADER_PAGE]),
+    };
+
+    return [data, paginationOptions];
   }
 }
 

@@ -1,5 +1,5 @@
 import React from "react";
-import { FlatList, TouchableOpacity, View } from "react-native";
+import { FlatList, Pressable } from "react-native";
 import ProductListItem from "../ProductListItem";
 import { Product } from "../../types";
 import styles from "./styles";
@@ -14,18 +14,27 @@ const ProductList: React.FC<ProductListProps> = ({
   onProductClick,
 }) => {
   const renderProduct = ({ item: product }: { item: Product }) => (
-    <TouchableOpacity onPress={() => onProductClick(product)}>
+    <Pressable
+      onPress={() => onProductClick(product)}
+      style={({ pressed }) => [
+        {
+          backgroundColor: pressed ? "lightyellow" : "white",
+        },
+      ]}
+    >
       <ProductListItem product={product} />
-    </TouchableOpacity>
+    </Pressable>
   );
 
   return (
-    <FlatList
-      style={styles.container}
-      data={products}
-      keyExtractor={(product) => product.id.toString()}
-      renderItem={renderProduct}
-    />
+    <>
+      <FlatList
+        style={styles.container}
+        data={products}
+        keyExtractor={(product) => product.id.toString()}
+        renderItem={renderProduct}
+      />
+    </>
   );
 };
 
