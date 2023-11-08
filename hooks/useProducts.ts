@@ -5,6 +5,7 @@ import { PaginationOptionsType, Product } from "../types";
 type UseProductsResult = {
   loading: boolean;
   products: Product[] | null | undefined;
+  showEmptyState: boolean;
   pagination: PaginationOptionsType | null | undefined;
   fetchProducts: (page?: number) => void;
 };
@@ -40,7 +41,14 @@ const useProducts = (search?: string): UseProductsResult => {
     }
   };
 
-  return { loading, products, pagination, fetchProducts };
+  return {
+    loading,
+    products,
+    pagination,
+    showEmptyState:
+      products !== null && products !== undefined && products.length === 0,
+    fetchProducts,
+  };
 };
 
 export default useProducts;

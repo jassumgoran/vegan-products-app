@@ -8,12 +8,14 @@ import ProductList from "../../components/ProductList";
 import { Product } from "../../types";
 import styles from "./styles";
 import Pagination from "../../components/Pagination";
+import EmptyState from "../../components/EmptyState";
 
 type Props = NativeStackScreenProps<RootStackParamList, "ProductList">;
 
 const ProductListScreen: React.FC<Props> = ({ navigation }) => {
   const [search, setSearch] = useState<string>("");
-  const { loading, products, pagination, fetchProducts } = useProducts(search);
+  const { loading, products, pagination, showEmptyState, fetchProducts } =
+    useProducts(search);
 
   const handleProductClick = (product: Product) => {
     navigation.navigate("ProductDetails", {
@@ -37,11 +39,18 @@ const ProductListScreen: React.FC<Props> = ({ navigation }) => {
                 onChangeText={setSearch}
               />
             </View>
-            <View style={styles.list}>
-              <ProductList
-                products={products}
-                onProductClick={handleProductClick}
-              />
+            <View style={styles.content}>
+              {showEmptyState ? (
+                <EmptyState
+                  title="No results"
+                  description="No results match your search criteria"
+                />
+              ) : (
+                <ProductList
+                  products={products}
+                  onProductClick={handleProductClick}
+                />
+              )}
             </View>
             {pagination && (
               <Pagination
