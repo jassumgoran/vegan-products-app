@@ -5,6 +5,7 @@ import { FontAwesome5 } from "@expo/vector-icons";
 import ProductListScreen from "./screens/ProductListScreen";
 import ProductDetailsScreen from "./screens/ProductDetailsScreen";
 import { RootStackParamList } from "./types";
+import colors from "./constants/colors";
 import "./api";
 
 const Stack = createNativeStackNavigator<RootStackParamList>();
@@ -21,7 +22,7 @@ export default function App() {
         screenOptions={{
           headerTintColor: "green",
           headerStyle: {
-            backgroundColor: "lightyellow",
+            backgroundColor: colors.accent,
           },
         }}
       >

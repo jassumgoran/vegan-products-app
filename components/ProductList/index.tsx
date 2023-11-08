@@ -1,8 +1,9 @@
 import React from "react";
-import { FlatList, Pressable } from "react-native";
+import { FlatList, Pressable, View } from "react-native";
 import ProductListItem from "../ProductListItem";
 import { Product } from "../../types";
 import styles from "./styles";
+import colors from "../../constants/colors";
 
 type ProductListProps = {
   products: Product[] | null | undefined;
@@ -18,7 +19,7 @@ const ProductList: React.FC<ProductListProps> = ({
       onPress={() => onProductClick(product)}
       style={({ pressed }) => [
         {
-          backgroundColor: pressed ? "lightyellow" : "white",
+          backgroundColor: pressed ? colors.accent : "transparent",
         },
       ]}
     >
@@ -33,6 +34,7 @@ const ProductList: React.FC<ProductListProps> = ({
         data={products}
         keyExtractor={(product) => product.id.toString()}
         renderItem={renderProduct}
+        ItemSeparatorComponent={() => <View style={styles.divider} />}
       />
     </>
   );

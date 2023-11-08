@@ -3,27 +3,30 @@ import colors from "../../constants/colors";
 import dimensions from "../../constants/dimensions";
 
 export default StyleSheet.create({
-  container: {
+  labelContainer: {
     flexDirection: "row",
-    justifyContent: "space-between",
     alignItems: "center",
-    padding: 10,
-  },
-  labels: {
-    flex: 1,
-    paddingRight: 10,
   },
   name: {
-    fontSize: dimensions.text.large,
-    fontWeight: "bold",
+    fontSize: dimensions.text.xxxlarge,
     color: colors.primary,
+    marginBottom: 5,
   },
   description: {
     fontSize: dimensions.text.medium,
     color: colors.text.secondary,
+    marginBottom: 10,
   },
-  price: {
+  text: {
     fontSize: dimensions.text.medium,
     color: colors.text.primary,
+    marginBottom: 10,
+  },
+  price: {
+    marginLeft: 5,
+    fontSize: dimensions.text.xlarge,
+    fontWeight: "bold",
+    color: "black",
+    marginBottom: 10,
   },
 });

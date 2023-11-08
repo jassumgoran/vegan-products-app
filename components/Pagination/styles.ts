@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native";
+import dimensions from "../../constants/dimensions";
 
 export default StyleSheet.create({
   container: {
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
-    backgroundColor: "white",
   },
   button: {
     borderWidth: 1,
@@ -20,6 +20,6 @@ export default StyleSheet.create({
     flex: 1,
     textAlign: "center",
     color: "black",
-    fontSize: 14,
+    fontSize: dimensions.text.medium,
   },
 });
